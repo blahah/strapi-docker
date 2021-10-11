@@ -6,9 +6,8 @@ API creation made simple, secure and fast.
 The most advanced open-source Content Management Framework to build powerful API with no effort.
 
 ---
-
-[![Travis](https://img.shields.io/travis/strapi/strapi-docker.svg?style=for-the-badge)](https://travis-ci.org/strapi/strapi-docker)
-[![Docker Pulls](https://img.shields.io/docker/pulls/strapi/strapi.svg?style=for-the-badge)](https://hub.docker.com/r/strapi/strapi)
+[![docker build](https://github.com/Loumaris/strapi-docker/actions/workflows/build.yml/badge.svg)](https://github.com/Loumaris/strapi-docker/actions/workflows/build.yml)
+[![Docker Pulls](https://img.shields.io/docker/pulls/loumaris/strapi.svg?style=for-the-badge)](https://hub.docker.com/r/loumaris/strapi)
 
 ## Images
 
