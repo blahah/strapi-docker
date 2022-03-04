@@ -49,11 +49,11 @@ jobs:
     strategy:
       matrix:
         strapi: ["base", "strapi"]
-        node: ["12", "12-alpine", "14", "14-alpine"]
-        strapiversion: "${{ fromJson(needs.grab_current_strapi_versions.outputs.strapiversions) }}"
+        node: ["14"]
+        strapiversion: ["${{ fromJson(needs.grab_current_strapi_versions.outputs.strapiversions) }}"]
         dockertags: ["${{ needs.grab_current_docker_versions.outputs.dockerversions }}"]
     env:
-      DOCKER_TAG:  loumaris/strapi:${{ matrix.strapiversion }}-${{ matrix.strapi }}-node${{ matrix.node }}
+      DOCKER_TAG:  blahah/strapi:${{ matrix.strapiversion }}-${{ matrix.strapi }}-node${{ matrix.node }}
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
