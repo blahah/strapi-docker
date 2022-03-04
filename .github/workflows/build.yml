@@ -23,7 +23,7 @@ jobs:
 
       steps:
           - id: set-strapi-versions
-            run: echo "::set-output name=strapiversions::$(curl -L -s https://api.github.com/repos/strapi/strapi/tags  | jq -r ' [.[].name | .[1:]] | join(",")')"
+            run: echo "::set-output name=strapiversions::$(curl -L -s https://api.github.com/repos/strapi/strapi/tags | jq -r ' [.[].name | .[1:]][0]')"
 
       outputs:
           strapiversions: ${{ steps.set-strapi-versions.outputs.strapiversions }}
