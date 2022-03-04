@@ -51,7 +51,7 @@ jobs:
       matrix:
         strapi: ["base", "strapi"]
         node: ["14"]
-        strapiversion: ["${{ fromJson(needs.grab_current_strapi_versions.outputs.strapiversions) }}"]
+        strapiversion: ["${{ needs.grab_current_strapi_versions.outputs.strapiversions }}"]
         dockertags: ["${{ needs.grab_current_docker_versions.outputs.dockerversions }}"]
     env:
       DOCKER_TAG:  blahah/strapi:${{ matrix.strapiversion }}-${{ matrix.strapi }}-node${{ matrix.node }}
