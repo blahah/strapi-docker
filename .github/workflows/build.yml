@@ -45,6 +45,7 @@ jobs:
   build:
     needs: [grab_current_strapi_versions, grab_current_docker_versions]
     runs-on: ubuntu-latest
+    environment: build
     continue-on-error: true
     strategy:
       matrix:
